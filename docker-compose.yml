@@ -6,8 +6,8 @@ services:
     image: portainer/portainer-ce:latest
     network_mode: "host"
     ports:
-      - "8000:8000"
-      - "9000:9000"
+      # - "56623:8000"
+      - "58220:9000"
     restart: unless-stopped
     volumes:
       - /var/lib/portainer/data:/data
