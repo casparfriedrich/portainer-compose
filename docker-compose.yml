@@ -2,7 +2,7 @@ version: "3.9"
 
 services:
   portainer:
-    image: portainer/portainer-ce:latest
+    image: portainer/portainer-ce:2.11.1-alpine
     network_mode: "host"
     restart: unless-stopped
     volumes:
