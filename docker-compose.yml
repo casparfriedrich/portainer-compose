@@ -1,14 +1,16 @@
 version: "3.9"
 
 services:
-  portainer:
+  app:
     container_name: portainer
     image: portainer/portainer-ce:latest
-    network_mode: "host"
     ports:
-      # - "56623:8000"
       - "58220:9000"
     restart: unless-stopped
     volumes:
       - /var/lib/portainer/data:/data
       - /var/run/docker.sock:/var/run/docker.sock
+
+networks:
+  default:
+    name: portainer
